@@ -1,0 +1,26 @@
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+    }
+    dependencies {
+        // Ensure the gradle plugin version matches the one you are using in the plugins block
+        classpath 'com.android.tools.build:gradle:8.0.2' // Updated to match the plugin version
+        classpath 'com.google.gms:google-services:4.4.2'
+
+        // Commenting out unused dependencies
+        // classpath 'org.tensorflow:tensorflow-lite:2.4.0'
+        // classpath 'org.tensorflow:tensorflow-lite-support:2.4.0'
+        // classpath 'org.tensorflow:tensorflow-lite-task:2.4.0'
+    }
+}
+
+// Plugins block to apply plugins using version '8.0.2'
+plugins {
+    id 'com.android.application' version '8.0.2' apply false
+    id 'com.android.library' version '8.0.2' apply false
+
+    // Commenting out unused plugin entries
+    // id 'org.tensorflow:tensorflow-lite-plugin' apply false
+}
